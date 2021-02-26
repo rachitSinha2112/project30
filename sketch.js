@@ -26,14 +26,14 @@ ground1=new Ground(1200,650,500,20);
  block7=new Block(1300,600);
  block8=new Block(1350,600);
  block9=new Block(1400,600);
- block10=new Block(1200,500);
- block11=new Block(1100,500);
- block12=new Block(1150,500);
- block13=new Block(1250,500);
+ block10=new Block(1200,530);
+ block11=new Block(1100,530);
+ block12=new Block(1150,530);
+ block13=new Block(1250,530);
  //block14=new Block(1000,500);
- block15=new Block(1050,500);
- block16=new Block(1300,500);
- block17=new Block(1350,500);
+ block15=new Block(1050,530);
+ block16=new Block(1300,530);
+ block17=new Block(1350,530);
  
 polygon1=new Polygon();
 
@@ -47,8 +47,8 @@ Engine.run(engine);
 
 
 function draw() {
-background("brown");
-
+ background("brown");
+Engine.update(engine);
 ground1.display();
 //ground2.dispaly();
 
