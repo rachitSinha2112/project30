@@ -12,23 +12,25 @@ class Block{
     }
 
     display(){
-        var pos=this.body.position
-        rectMode(CENTER) 
-        fill("pink");
-        strokeWeight(2);
-        stroke("red");
-
-        rect(pos.x,pos.y,this.width,this.height);
-console.log(this.body.speed);
-
-         if(this.body.speed>5){
-            
         
-                 push();
-                 this.visibility=this.visibility-5;
-                 tint(255,this.visibility)
-        //         rect(this.body.position.x,this.body.position.y,this.width,this.height);
-                 World.remove(world,this.body)       
+//console.log(this.body.speed);
+
+         if(this.body.speed<5){
+            var pos=this.body.position
+            rectMode(CENTER) 
+            fill("pink");
+            strokeWeight(2);
+            stroke("red");
+    
+            rect(pos.x,pos.y,this.width,this.height); 
+        }
+        else{
+         push();
+            World.remove(world,this.body);
+            this.visibility=this.visibility-1;                 
+            tint(255,this.visibility)
+        //rect(this.body.position.x,this.body.position.y,this.width,this.height);
+             World.remove(world,this.body)       
             pop();
           }
         
